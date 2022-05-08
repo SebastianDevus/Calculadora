@@ -16,9 +16,9 @@ public class AritmeticaTest
     [InlineData(0, 3, 3)]
     [InlineData(-2, 0, -2)]
     [InlineData(0, 0, 0)]
-    public void SomarCalculaCorretamente(double parcela1, double parcela2, double resultadoEsperado)
+    public void AdicaoCalculaCorretamente(double parcela1, double parcela2, double resultadoEsperado)
     {
-        Assert.Equal(resultadoEsperado, Aritmetica.Soma(parcela1, parcela2));
+        Assert.Equal(resultadoEsperado, Aritmetica.Adicao(parcela1, parcela2));
     }
 
     [Theory]
@@ -35,5 +35,38 @@ public class AritmeticaTest
     public void SubtrairCalculaCorretamente(double minuendo, double subtraendo, double resultadoEsperado)
     {
         Assert.Equal(resultadoEsperado, Aritmetica.Subtracao(minuendo, subtraendo));
+    }
+
+    [Theory]
+    [InlineData(2, 2, 4)]
+    [InlineData(2, 3, 6)]
+    [InlineData(-2, 3, -6)]
+    [InlineData(2, -3, -6)]
+    [InlineData(2.5, 3, 7.5)]
+    [InlineData(-2, 3.5, -7)]
+    [InlineData(2.5, -3, -7.5)]
+    [InlineData(0, 3, 0)]
+    [InlineData(-2, 0, 0)]
+    [InlineData(0, 0, 0)]
+    public void MultiplicarCalculaCorretamente(double fator1, double fator2, double resultadoEsperado)
+    {
+        Assert.Equal(resultadoEsperado, Aritmetica.Multiplicacao(fator1, fator2));
+    }
+
+
+    [Theory]
+    [InlineData(2, 2, 1)]
+    [InlineData(2, 4, 0.5)]
+    [InlineData(-2, 4, -0.5)]
+    [InlineData(2, -4, -0.5)]
+    [InlineData(-3, -2, 1.5)]
+    [InlineData(3, -2, -1.5)]
+    [InlineData(2.5, 2.5, 1)]
+    [InlineData(2.5, 25, 0.1)]
+    [InlineData(25, 2.5, 10)]
+    [InlineData(250, 2, 125)]
+    public void DividirCalculaCorretamente(double dividendo, double divisor, double resultadoEsperado)
+    {
+        Assert.Equal(resultadoEsperado, Aritmetica.Divisao(dividendo, divisor));
     }
 }
