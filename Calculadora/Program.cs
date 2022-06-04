@@ -10,38 +10,50 @@ Console.WriteLine("[+] Adição");
 Console.WriteLine("[-] Subtração");
 Console.WriteLine("[*] Multiplicação");
 Console.WriteLine("[/] Divisão");
+Console.WriteLine("[^] Exponenciação");
 Console.Write("\nEscolha uma operação: ");
 operacaoDesejada = Console.ReadLine()!;
 
 // Chama o método apropriado dependendo da operação escolhida
 // Os métodos estão no diretório Calculadora.Lib, arquivo AritmeticaVisuais
-switch (operacaoDesejada)
+try
 {
-    case ("+"):
-    AritmeticaVisuais.AdicaoVisuais();
-    break;
+    switch (operacaoDesejada)
+    {
+        case ("+"):
+            AritmeticaVisuais.AdicaoVisuais();
+            break;
 
-    case ("-"):
-    AritmeticaVisuais.SubtracaoVisuais();
-    break;
+        case ("-"):
+            AritmeticaVisuais.SubtracaoVisuais();
+            break;
 
-    case ("*"):
-    AritmeticaVisuais.MultiplicacaoVisuais();
-    break;
+        case ("*"):
+            AritmeticaVisuais.MultiplicacaoVisuais();
+            break;
 
-    case ("/"):
-    AritmeticaVisuais.DivisaoVisuais();
-    break;
+        case ("/"):
+            AritmeticaVisuais.DivisaoVisuais();
+            break;
 
-    default:
-    Console.Beep();
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine("\nOpção inválida");
-    break;
+        case ("^"):
+            AritmeticaVisuais.ExponenciacaoVisuais();
+            break;
+
+        default:
+            throw new Exception("Opção inválida!");
+    }
+}
+catch (Exception e)
+{
+    Console.WriteLine(); // Espaçamento
+    AritmeticaVisuais.ExibeMensagemDeErro(e.Message);
+}
+finally
+{
+    Console.ResetColor();
 }
 
-// Resetando a cor apenas para ter certeza
-Console.ResetColor();
 
 // Pausando após a operação para o usuário ver o resultado e limpar o console depois
 Console.Write("\nPressione uma tecla para finalizar...");

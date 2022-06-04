@@ -69,4 +69,21 @@ public class AritmeticaTest
     {
         Assert.Equal(resultadoEsperado, Aritmetica.Divisao(dividendo, divisor));
     }
+
+
+    [Theory]
+    [InlineData(2, 2, 4)]
+    [InlineData(3, 2, 9)]
+    [InlineData(2, -1, 0.5)]
+    [InlineData(-2, 2, 4)]
+    [InlineData(10, 2, 100)]
+    [InlineData(4, 0.5, 2)]
+    [InlineData(16, 0.5, 4)]
+    [InlineData(1, 1, 1)]
+    [InlineData(10, 0, 1)]
+    [InlineData(1, 100, 1)]
+    public void ExponenciacaoCalculaCorretamente(double numeroBase, double expoente, double resultadoEsperado)
+    {
+        Assert.Equal(resultadoEsperado, Aritmetica.Exponenciacao(numeroBase, expoente));
+    }
 }

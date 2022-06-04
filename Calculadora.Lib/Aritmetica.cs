@@ -27,4 +27,25 @@ public class Aritmetica
             return dividendo / divisor;
         }
     }
+
+    public static double Exponenciacao(double numeroBase, double expoente)
+    {
+        return Math.Pow(numeroBase, expoente);
+    }
+
+    public static double Radiciação(double radicando, double indice)
+    {
+        if (radicando <= 0 && indice % 2 == 0)
+        {
+            throw new Exception("O radicando deve ser maior do que 0 quando o índice é par");
+        }
+        else if (indice <= 0)
+        {
+            throw new Exception("O índice deve ser maior que 0");
+        }
+        else
+        {
+            return Math.Pow(radicando, 1.0 / indice);
+        }
+    }
 }

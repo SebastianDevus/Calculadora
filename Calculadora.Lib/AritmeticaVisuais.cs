@@ -64,7 +64,7 @@ public class AritmeticaVisuais
         double a, b, resultado;
 
         Console.Clear();
-        Console.WriteLine("-----Subtração a - b-----\n");
+        Console.WriteLine("-----Divisão a / b-----\n");
 
         Console.Write("A = ");
         a = Convert.ToDouble(Console.ReadLine());
@@ -73,9 +73,7 @@ public class AritmeticaVisuais
 
         if (b == 0)
         {
-            Console.Beep();
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nNão é possível dividir por 0!");
+            throw new Exception("Não é possível dividir por 0!");
         }
         else
         {
@@ -85,7 +83,31 @@ public class AritmeticaVisuais
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"\n{a} dividido por {b} é igual a {resultado}");
         }
-
         return;
+    }
+
+    public static void ExponenciacaoVisuais()
+    {
+        double a, b, resultado;
+        Console.Clear();
+        Console.WriteLine("-----Exponenciação a ^ b-----\n");
+
+        Console.Write("A = ");
+        a = Convert.ToDouble(Console.ReadLine());
+        Console.Write("B = ");
+        b = Convert.ToDouble(Console.ReadLine());
+
+        Console.ForegroundColor = ConsoleColor.Green; // Mudando a cor para dar destaque ao resultado
+        resultado = Aritmetica.Exponenciacao(a, b);
+
+        Console.WriteLine($"\n{a} elevado a {b} é igual a {resultado}");
+        return;
+    }
+
+    public static void ExibeMensagemDeErro(string mensagemDeErro)
+    {
+        Console.Beep();
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine(mensagemDeErro);
     }
 }
