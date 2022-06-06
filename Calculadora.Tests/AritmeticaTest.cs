@@ -86,4 +86,20 @@ public class AritmeticaTest
     {
         Assert.Equal(resultadoEsperado, Aritmetica.Exponenciacao(numeroBase, expoente));
     }
+
+    [Theory]
+    [InlineData(4, 2, 2)]
+    [InlineData(16, 2, 4)]
+    [InlineData(8, 3, 2)]
+    [InlineData(9, 2, 3)]
+    [InlineData(100, 2, 10)]
+    [InlineData(16, 4, 2)]
+    [InlineData(400, 2, 20)]
+    [InlineData(1, 2, 1)]
+    [InlineData(0, 3, 0)]
+    [InlineData(32, 5, 2)]
+    public void RadiciacaoCalculaCorretamente(double radicando, double indice, double resultadoEsperado)
+    {
+        Assert.Equal(resultadoEsperado, Aritmetica.Radiciacao(radicando, indice));
+    }
 }

@@ -11,6 +11,7 @@ Console.WriteLine("[-] Subtração");
 Console.WriteLine("[*] Multiplicação");
 Console.WriteLine("[/] Divisão");
 Console.WriteLine("[^] Exponenciação");
+Console.WriteLine("[R] Radiciação");
 Console.Write("\nEscolha uma operação: ");
 operacaoDesejada = Console.ReadLine()!;
 
@@ -38,6 +39,10 @@ try
 
         case ("^"):
             AritmeticaVisuais.ExponenciacaoVisuais();
+            break;
+
+        case ("R"):
+            AritmeticaVisuais.RadiciacaoVisuais();
             break;
 
         default:

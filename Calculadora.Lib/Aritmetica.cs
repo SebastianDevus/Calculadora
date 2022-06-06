@@ -33,15 +33,15 @@ public class Aritmetica
         return Math.Pow(numeroBase, expoente);
     }
 
-    public static double Radiciação(double radicando, double indice)
+    public static double Radiciacao(double radicando, double indice)
     {
-        if (radicando <= 0 && indice % 2 == 0)
+        if (radicando < 0) 
         {
-            throw new Exception("O radicando deve ser maior do que 0 quando o índice é par");
+            throw new Exception("O radicando (A) deve ser maior ou igual a 0");
         }
         else if (indice <= 0)
         {
-            throw new Exception("O índice deve ser maior que 0");
+            throw new Exception("O índice (B) deve ser maior que 0");
         }
         else
         {

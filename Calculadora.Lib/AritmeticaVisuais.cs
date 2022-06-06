@@ -6,7 +6,7 @@ public class AritmeticaVisuais
     {
         double a, b, resultado;
         Console.Clear();
-        Console.WriteLine("-----Adição a + b-----\n");
+        Console.WriteLine("----- Adição a + b -----\n");
 
         Console.Write("A = ");
         a = Convert.ToDouble(Console.ReadLine());
@@ -25,7 +25,7 @@ public class AritmeticaVisuais
     {
         double a, b, resultado;
         Console.Clear();
-        Console.WriteLine("-----Subtração a - b-----\n");
+        Console.WriteLine("----- Subtração a - b -----\n");
 
         Console.Write("A = ");
         a = Convert.ToDouble(Console.ReadLine());
@@ -44,7 +44,7 @@ public class AritmeticaVisuais
     {
         double a, b, resultado;
         Console.Clear();
-        Console.WriteLine("-----Multiplicação a * b-----\n");
+        Console.WriteLine("----- Multiplicação a * b -----\n");
 
         Console.Write("A = ");
         a = Convert.ToDouble(Console.ReadLine());
@@ -64,25 +64,19 @@ public class AritmeticaVisuais
         double a, b, resultado;
 
         Console.Clear();
-        Console.WriteLine("-----Divisão a / b-----\n");
+        Console.WriteLine("----- Divisão a / b -----\n");
 
         Console.Write("A = ");
         a = Convert.ToDouble(Console.ReadLine());
         Console.Write("B = ");
         b = Convert.ToDouble(Console.ReadLine());
 
-        if (b == 0)
-        {
-            throw new Exception("Não é possível dividir por 0!");
-        }
-        else
-        {
-            resultado = Aritmetica.Divisao(a, b);
+        resultado = Aritmetica.Divisao(a, b);
 
-            // Mudando a cor para dar destaque ao resultado
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"\n{a} dividido por {b} é igual a {resultado}");
-        }
+        // Mudando a cor para dar destaque ao resultado
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\n{a} dividido por {b} é igual a {resultado}");
+
         return;
     }
 
@@ -90,7 +84,7 @@ public class AritmeticaVisuais
     {
         double a, b, resultado;
         Console.Clear();
-        Console.WriteLine("-----Exponenciação a ^ b-----\n");
+        Console.WriteLine("----- Exponenciação a ^ b -----\n");
 
         Console.Write("A = ");
         a = Convert.ToDouble(Console.ReadLine());
@@ -101,6 +95,24 @@ public class AritmeticaVisuais
         resultado = Aritmetica.Exponenciacao(a, b);
 
         Console.WriteLine($"\n{a} elevado a {b} é igual a {resultado}");
+        return;
+    }
+
+    public static void RadiciacaoVisuais()
+    {
+        double a, b, resultado;
+        Console.Clear();
+        Console.WriteLine("----- Radiciação raiz b de a -----\n");
+
+        Console.Write("A = ");
+        a = Convert.ToDouble(Console.ReadLine());
+        Console.Write("B = ");
+        b = Convert.ToDouble(Console.ReadLine());
+
+        Console.ForegroundColor = ConsoleColor.Green; // Mudando a cor para dar destaque ao resultado
+        resultado = Aritmetica.Radiciacao(a, b);
+
+        Console.WriteLine($"\nA raiz {b} de {a} é {resultado}");
         return;
     }
 
