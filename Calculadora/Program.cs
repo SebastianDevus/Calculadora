@@ -3,6 +3,8 @@ using Calculadora.Lib;
 
 string operacaoDesejada;
 
+do
+{
 Console.Clear();
 
 Console.WriteLine("-----Calculadora Aritmética-----\n");
@@ -12,6 +14,7 @@ Console.WriteLine("[*] Multiplicação");
 Console.WriteLine("[/] Divisão");
 Console.WriteLine("[^] Exponenciação");
 Console.WriteLine("[R] Radiciação");
+Console.WriteLine("\n[0] Sair");
 Console.Write("\nEscolha uma operação: ");
 operacaoDesejada = Console.ReadLine()!;
 
@@ -45,6 +48,12 @@ try
             AritmeticaVisuais.RadiciacaoVisuais();
             break;
 
+            case ("0"):
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("\nObrigado por usar meu programa!\n");
+            Console.ResetColor();
+            return;
+
         default:
             throw new Exception("Opção inválida!");
     }
@@ -61,6 +70,6 @@ finally
 
 
 // Pausando após a operação para o usuário ver o resultado e limpar o console depois
-Console.Write("\nPressione uma tecla para finalizar...");
+Console.Write("\nPressione uma tecla para Continuar...");
 Console.ReadKey();
-Console.Clear();
+} while (operacaoDesejada != "0");
