@@ -1,20 +1,22 @@
-# Calculadora
-Feita usando o [template](https://github.com/ermogenes/calculadora-2022-final) disponibilizado por Ermogenes Palacio
+# Calculadora para prompt de comando do Windows
 
+////
 
+Dependências: 
+- [Dotnet Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime)
 
-Dependências:
-[Dotnet Runtime](https://dotnet.microsoft.com/en-us/download)
+////
 
+Calculadora com uso de Classlib e Testes - Realiza as quatro operações básicas, exponenciação e radiciação.
 
-Calculadora com uso de Classlib e Testes - Etec AB, 2022-1
+////
 
-Realiza as quatro operações básicas, exponenciação e radiciação.
+Meus sinceros agradecimentos: 
+- Aos professores [Ermogenes Palacio](https://github.com/ermogenes) e [Diego Neri](https://github.com/diegoneri), por compartilharem seus conhecimentos com 	a turma de Informática da ETEC Adolpho Berezin. 
+- Aos meus pais, por me incentivarem a adentrar o curso o qual participo no momento.
 
+////
 
-Agradecimentos:
-Aos professores Ermogenes Palacio e Diego Neri, por compartilharem seus conhecimentos com a turma de Informática da ETEC Adolpho Berezin.
-Aos meus pais, por me incentivarem a adentrar o curso o qual participo no momento.
-
-Créditos
-Desenvolvedor: [Sebastian Devus da Silva](https://github.com/SebastianDevus)
+Créditos 
+- Desenvolvedor: [Sebastian Devus da Silva](https://github.com/SebastianDevus)
+- [Template](https://github.com/ermogenes/calculadora-2022-final) disponibilizado por [Ermogenes Palacio](https://github.com/ermogenes)
