@@ -70,6 +70,6 @@ finally
 
 
 // Pausando após a operação para o usuário ver o resultado e limpar o console depois
-Console.Write("\nPressione uma tecla para Continuar...");
+Console.Write("\nPressione uma tecla para continuar...");
 Console.ReadKey();
 } while (operacaoDesejada != "0");
