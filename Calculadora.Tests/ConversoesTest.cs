@@ -5,6 +5,9 @@ namespace Calculadora.Tests;
 
 public class ConversoesTest
 {
+    // ================================================================================================================
+    // ================================================== DISTÂNCIAS ==================================================
+    // ================================================================================================================
     [Theory]
     [InlineData(1.609, 1)]
     [InlineData(8, 4.972)]
@@ -36,4 +39,53 @@ public class ConversoesTest
     {
         Assert.Equal(resultadoEsperado, Conversoes.MilhaParaKm(distanciaMilhas));
     }
+    
+
+    // ================================================================================================================
+    // ================================================= TEMPERATURAS =================================================
+    // ================================================================================================================
+    [Theory]
+    [InlineData(0, 273.15)]
+    [InlineData(-273.15, 0)]
+    [InlineData(100, 373.15)]
+    [InlineData(30.15, 303.30)]
+    [InlineData(-273, 0.15)]
+    public void CelsiusParaKelvinCalculaCorretamente(double temperaturaCelsius, double resultadoEsperado)
+    {
+        Assert.Equal(resultadoEsperado, Conversoes.CelsiusParaKelvin(temperaturaCelsius));
+    }
+
+    [Theory]
+    [InlineData(273.15, 0)]
+    [InlineData(0, -273.15)]
+    [InlineData(373.15, 100)]
+    [InlineData(303.30, 30.15)]
+    [InlineData(0.15, -273)]
+    public void KelvinParaCelsiusCalculaCorretamente(double temperaturaKelvin, double resultadoEsperado)
+    {
+        Assert.Equal(resultadoEsperado, Conversoes.KelvinParaCelsius(temperaturaKelvin));
+    }
+
+    [Theory]
+    [InlineData(0, -17.78)]
+    [InlineData(32, 0)]
+    [InlineData(212, 100)]
+    [InlineData(86.5, 30.28)]
+    [InlineData(-4, -20)]
+    public void FahrenheitParaCelsiusCalculaCorretamente(double temperaturaFah, double resultadoEsperado)
+    {
+        Assert.Equal(resultadoEsperado, Conversoes.FahrenheitParaCelsius(temperaturaFah));
+    }
+
+    [Theory]
+    [InlineData(-17.78, 0)]
+    [InlineData(0, 32)]
+    [InlineData(100, 212)]
+    [InlineData(30.28, 86.5)]
+    [InlineData(-20, -4)]
+    public void CelsiusParaFahrenheitCalculaCorretamente(double temperaturaCelsius, double resultadoEsperado)
+    {
+        Assert.Equal(resultadoEsperado, Conversoes.CelsiusParaFahrenheit(temperaturaCelsius));
+    }
+
 }
