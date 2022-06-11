@@ -1,7 +1,7 @@
 ﻿//Permitindo que os métodos de Visuais sejam chamados
 using Calculadora.Lib;
 
-string operacaoDesejada;
+string opcaoDesejada;
 
 do
 {
@@ -19,41 +19,46 @@ do
 
     Console.WriteLine("\n[S] Sobre");
     Console.WriteLine("[0] Sair");
-    Console.Write("\nEscolha uma operação: ");
-    operacaoDesejada = Console.ReadLine()!;
+
+    Console.Write("\nEscolha uma opção: ");
+    opcaoDesejada = Console.ReadLine()!;
 
     // Chama o método apropriado dependendo da operação escolhida
     // Os métodos estão no diretório Calculadora.Lib, arquivo AritmeticaVisuais
     try
     {
-        switch (operacaoDesejada)
+        switch (opcaoDesejada)
         {
-            case ("+"):
+            case ("1"):
                 AritmeticaVisuais.AdicaoVisuais();
                 break;
 
-            case ("-"):
+            case ("2"):
                 AritmeticaVisuais.SubtracaoVisuais();
                 break;
 
-            case ("*"):
+            case ("3"):
                 AritmeticaVisuais.MultiplicacaoVisuais();
                 break;
 
-            case ("/"):
+            case ("4"):
                 AritmeticaVisuais.DivisaoVisuais();
                 break;
 
-            case ("^"):
+            case ("5"):
                 AritmeticaVisuais.ExponenciacaoVisuais();
                 break;
 
-            case ("R") or ("r"):
+            case ("6"):
                 AritmeticaVisuais.RadiciacaoVisuais();
                 break;
 
+            case ("C"):
+                ConversoesVisuais.MenuConversoes();
+                break;
+
             case ("S") or ("s"):
-                ExibeSobre();
+                VisuaisMiscelanios.ExibeSobre();
                 break;
 
             case ("0"):
@@ -68,7 +73,7 @@ do
     catch (Exception e)
     {
         Console.WriteLine(); // Espaçamento
-        AritmeticaVisuais.ExibeMensagemDeErro(e.Message);
+        VisuaisMiscelanios.ExibeMensagemDeErro(e.Message);
     }
     finally
     {
@@ -78,21 +83,5 @@ do
     // Pausando após a operação para o usuário ver o resultado e limpar o console depois
     Console.Write("\nPressione uma tecla para continuar...");
     Console.ReadKey();
-} 
-while (operacaoDesejada != "0");
-
-// Não sei onde colocar, então vai aqui
-static void ExibeSobre()
-{
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("\nSobre mim:\n");
-    Console.ResetColor();
-
-    Console.WriteLine("-Sou Sebastian Devus da Silva, nasci no dia 9 de outubro de 2004.");
-    Console.WriteLine("-Fiz esse programa durante a finalização do meu curso de informática na ETEC Adolpho Berezin, localizada em Mongaguá.");
-    Console.WriteLine("-Dedico esse programa a meus pais, professores e todos aqueles que me ajudaram no caminho.\n");
-
-    Console.ForegroundColor = ConsoleColor.Yellow;
-    Console.WriteLine("Site do programa: https://sebastiandevus.github.io/Calculadora/");
-    Console.ResetColor();
 }
+while (opcaoDesejada != "0");

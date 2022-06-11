@@ -115,11 +115,4 @@ public class AritmeticaVisuais
         Console.WriteLine($"\nA raiz {b} de {a} é {resultado}");
         return;
     }
-
-    public static void ExibeMensagemDeErro(string mensagemDeErro)
-    {
-        Console.Beep();
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine(mensagemDeErro);
-    }
 }
