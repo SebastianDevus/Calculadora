@@ -4,11 +4,11 @@ public class ConversoesVisuais
 {
     public static void MenuConversoes()
     {
-        Console.Clear();
         string conversaoDesejada;
 
         do
         {
+            Console.Clear();
             Console.WriteLine("----- Conversões -----\n");
             Console.WriteLine("[1] Quilômetros para milhas");
             Console.WriteLine("[2] Milhas para quilômetros (KM)");
@@ -16,6 +16,8 @@ public class ConversoesVisuais
             Console.WriteLine("[4] Kelvin Para graus Celsius");
             Console.WriteLine("[5] Graus Celsius para graus Fahrenheit");
             Console.WriteLine("[6] Graus Fahrenheit para graus Celsius");
+            Console.WriteLine("[7] Graus Fahrenheit para Kelvin");
+            Console.WriteLine("[8] Kelvin para graus Fahrenheit");
 
             Console.WriteLine("\n[0] Voltar");
 
@@ -34,8 +36,35 @@ public class ConversoesVisuais
                         MilhasParaQuilometrosVisuais();
                         break;
 
+                    case "3":
+                        CelsiusParaKelvinVisuais();
+                        break;
+
+                    case "4":
+                        KelvinParaCelsiusVisuais();
+                        break;
+
+                    case "5":
+                        CelsiusParaFahrenheitVisuais();
+                        break;
+
+                    case "6":
+                        FahrenheitParaCelsiusVisuais();
+                        break;
+
+                    case "7":
+                        FahrenheitParaKelvinVisuais();
+                        break;
+
+                    case "8":
+                        KelvinParaFahrenheitVisuais();
+                        break;
+
                     case "0":
                         return;
+
+                    default:
+                        throw new Exception("Opção inválida!");
                 }
             }
             catch (Exception e)
@@ -47,9 +76,7 @@ public class ConversoesVisuais
                 Console.ResetColor();
             }
 
-            // Pausando após a operação para o usuário ver o resultado e limpar o console depois
-            Console.Write("\nPressione uma tecla para continuar...");
-            Console.ReadKey();
+            VisuaisMiscelanios.Pausa();
         }
         while (conversaoDesejada != "0");
 
@@ -67,7 +94,10 @@ public class ConversoesVisuais
 
         double distanciaMilhas = Conversoes.KmParaMilhas(distanciaQuilometros);
 
-        Console.WriteLine($"\nO equivalente em milhas é aproximadamente {distanciaMilhas}");
+        // Mudando a cor para dar destaque ao resultado
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nO equivalente em milhas é aproximadamente {distanciaMilhas} M");
+
         return;
     }
 
@@ -80,9 +110,122 @@ public class ConversoesVisuais
         Console.Write("Insira a distância em M: ");
         double distanciaMilhas = Convert.ToDouble(Console.ReadLine());
 
-        double distanciaQuilometros = Conversoes.KmParaMilhas(distanciaMilhas);
+        double distanciaQuilometros = Conversoes.MilhaParaKm(distanciaMilhas);
 
-        Console.WriteLine($"\nO equivalente em quilômetros é aproximadamente {distanciaQuilometros}");
+        // Mudando a cor para dar destaque ao resultado
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nO equivalente em quilômetros é aproximadamente {distanciaQuilometros} Km");
+
+        return;
+    }
+
+    public static void CelsiusParaKelvinVisuais()
+    {
+        Console.Clear();
+
+        Console.WriteLine("----- Celsius para Kelvin -----\n");
+
+        Console.Write("Insira a temperatura em graus Celsius: ");
+        double temperaturaCelsius = Convert.ToDouble(Console.ReadLine());
+
+        double temperaturaKelvin = Conversoes.CelsiusParaKelvin(temperaturaCelsius);
+
+        // Mudando a cor para dar destaque ao resultado
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nO equivalente em Kelvin é {temperaturaKelvin} K");
+
+        return;
+    }
+
+    public static void KelvinParaCelsiusVisuais()
+    {
+        Console.Clear();
+
+        Console.WriteLine("----- Kelvin para Celsius -----\n");
+
+        Console.Write("Insira a temperatura em Kelvin: ");
+        double temperaturaKelvin = Convert.ToDouble(Console.ReadLine());
+
+        double temperaturaCelsius = Conversoes.KelvinParaCelsius(temperaturaKelvin);
+
+        // Mudando a cor para dar destaque ao resultado
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nO equivalente em graus Celsius é {temperaturaCelsius} °C");
+
+        return;
+    }
+
+    public static void CelsiusParaFahrenheitVisuais()
+    {
+        Console.Clear();
+
+        Console.WriteLine("----- Celsius para Fahrenheit -----\n");
+
+        Console.Write("Insira a temperatura em graus Celsius: ");
+        double temperaturaCelsius = Convert.ToDouble(Console.ReadLine());
+
+        double temperaturaFahrenheit = Conversoes.CelsiusParaFahrenheit(temperaturaCelsius);
+
+        // Mudando a cor para dar destaque ao resultado
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nO equivalente em graus Fahrenheit é aproximadamente {temperaturaFahrenheit} °F");
+
+        return;
+    }
+
+    public static void FahrenheitParaCelsiusVisuais()
+    {
+        Console.Clear();
+
+        Console.WriteLine("----- Fahrenheit para Celsius -----\n");
+
+        Console.Write("Insira a temperatura em graus Fahrenheit: ");
+        double temperaturaFahrenheit = Convert.ToDouble(Console.ReadLine());
+
+        double temperaturaCelsius = Conversoes.FahrenheitParaCelsius(temperaturaFahrenheit);
+
+        // Mudando a cor para dar destaque ao resultado
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nO equivalente em graus Celsius é aproximadamente {temperaturaCelsius} °C");
+
+        return;
+    }
+
+    public static void FahrenheitParaKelvinVisuais()
+    {
+        Console.Clear();
+
+        Console.WriteLine("----- Fahrenheit para Kelvin -----\n");
+
+        Console.Write("Insira a temperatura em graus Fahrenheit: ");
+        double temperaturaFahrenheit = Convert.ToDouble(Console.ReadLine());
+
+        double temperaturaCelsius = Conversoes.FahrenheitParaCelsius(temperaturaFahrenheit);
+        double temperaturaKelvin = Conversoes.CelsiusParaKelvin(temperaturaCelsius);
+
+        // Mudando a cor para dar destaque ao resultado
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nO equivalente em Kelvin é aproximadamente {temperaturaKelvin} K");
+
+        return;
+    }
+
+    public static void KelvinParaFahrenheitVisuais()
+    {
+        Console.Clear();
+
+        Console.WriteLine("----- Kelvin para Fahrenheit -----\n");
+
+        Console.Write("Insira a temperatura em Kelvin: ");
+        double temperaturaKelvin = Convert.ToDouble(Console.ReadLine());
+
+        double temperaturaCelsius = Conversoes.KelvinParaCelsius(temperaturaKelvin);
+        double temperaturaFahrenheit = Conversoes.CelsiusParaFahrenheit(temperaturaCelsius);
+
+        // Mudando a cor para dar destaque ao resultado
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nO equivalente em graus Fahrenheit é aproximadamente {temperaturaFahrenheit} °F");
+
         return;
     }
 }

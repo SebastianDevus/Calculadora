@@ -29,41 +29,55 @@ do
     {
         switch (opcaoDesejada)
         {
-            case ("1"):
+            case "1":
                 AritmeticaVisuais.AdicaoVisuais();
+
+                VisuaisMiscelanios.Pausa();
                 break;
 
-            case ("2"):
+            case "2":
                 AritmeticaVisuais.SubtracaoVisuais();
+
+                VisuaisMiscelanios.Pausa();
                 break;
 
-            case ("3"):
+            case "3":
                 AritmeticaVisuais.MultiplicacaoVisuais();
+
+                VisuaisMiscelanios.Pausa();
                 break;
 
-            case ("4"):
+            case "4":
                 AritmeticaVisuais.DivisaoVisuais();
+
+                VisuaisMiscelanios.Pausa();
                 break;
 
-            case ("5"):
+            case "5":
                 AritmeticaVisuais.ExponenciacaoVisuais();
+
+                VisuaisMiscelanios.Pausa();
                 break;
 
-            case ("6"):
+            case "6":
                 AritmeticaVisuais.RadiciacaoVisuais();
+
+                VisuaisMiscelanios.Pausa();
                 break;
 
-            case ("C"):
+            case "C" or "c":
                 ConversoesVisuais.MenuConversoes();
                 break;
 
-            case ("S") or ("s"):
+            case "S" or "s":
                 VisuaisMiscelanios.ExibeSobre();
+
+                VisuaisMiscelanios.Pausa();
                 break;
 
-            case ("0"):
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("\nObrigado por usar meu programa!\n");
+            case "0":
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\nObrigado por usar meu programa!");
                 return;
 
             default:
@@ -72,16 +86,13 @@ do
     }
     catch (Exception e)
     {
-        Console.WriteLine(); // Espaçamento
         VisuaisMiscelanios.ExibeMensagemDeErro(e.Message);
+        
+        VisuaisMiscelanios.Pausa();
     }
     finally
     {
         Console.ResetColor();
     }
-
-    // Pausando após a operação para o usuário ver o resultado e limpar o console depois
-    Console.Write("\nPressione uma tecla para continuar...");
-    Console.ReadKey();
 }
 while (opcaoDesejada != "0");

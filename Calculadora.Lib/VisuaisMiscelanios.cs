@@ -5,6 +5,7 @@ public class VisuaisMiscelanios
 {
     public static void ExibeMensagemDeErro(string mensagemDeErro)
     {
+        Console.WriteLine(); // Espaçamento
         Console.Beep();
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine(mensagemDeErro);
@@ -23,5 +24,14 @@ public class VisuaisMiscelanios
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("Site do programa: https://sebastiandevus.github.io/Calculadora/");
         Console.ResetColor();
+    }
+
+    public static void Pausa()
+    {
+        Console.ResetColor();
+
+        // Pausando após a operação para o usuário ver o resultado e limpar o console depois
+        Console.Write("\nPressione uma tecla para continuar...");
+        Console.ReadKey();
     }
 }
