@@ -23,4 +23,4 @@ Meus sinceros agradecimentos:
 
 Créditos 
 - Desenvolvedor: [Sebastian Devus da Silva](https://github.com/SebastianDevus)
-- [Template](https://github.com/ermogenes/calculadora-2022-final) disponibilizado por [Ermogenes Palacio](https://github.com/ermogenes)
+- [Template do programa](https://github.com/ermogenes/calculadora-2022-final) disponibilizado por [Ermogenes Palacio](https://github.com/ermogenes)
