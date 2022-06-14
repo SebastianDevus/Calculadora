@@ -9,6 +9,10 @@ Dependências:
 
 ////
 
+[Clique para baixar o ZIP](dist/Calculadora.zip)
+
+////
+
 Calculadora com uso de Classlib e Testes - Realiza as quatro operações básicas, exponenciação e radiciação.
 
 ////
