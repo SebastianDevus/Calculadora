@@ -2,7 +2,7 @@
 
 ////
 
-[Clique para baixar o ZIP](dist/Calculadora.zip)
+[Clique para baixar o ZIP](../main/dist/Calculadora.zip)
 
 ////
 
