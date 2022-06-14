@@ -2,7 +2,7 @@
 
 ////
 
-[Clique para baixar o ZIP](../../blob/main/dist/Calculadora.zip)
+[Clique para baixar o ZIP](https://github.com/SebastianDevus/Calculadora/blob/main/dist/Calculadora.zip)
 
 ////
 
