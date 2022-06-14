@@ -1,5 +1,3 @@
-dist/Calculadora.zip
-
 # Calculadora para prompt de comando do Windows
 
 ////
