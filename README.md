@@ -1,13 +1,11 @@
+dist/Calculadora.zip
+
 # Calculadora para prompt de comando do Windows
 
 ////
 
 Dependências: 
 - [Dotnet Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime)
-
-////
-
-[Clique para baixar o ZIP](dist/Calculadora.zip)
 
 ////
 
