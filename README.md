@@ -2,12 +2,12 @@
 
 ////
 
-Dependências: 
-- [Dotnet Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime)
+[Clique para baixar o ZIP](https://github.com/SebastianDevus/Calculadora/blob/main/dist/Calculadora.zip)
 
 ////
 
-[Clique para baixar o ZIP](dist/Calculadora.zip)
+Dependências: 
+- [Dotnet Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime)
 
 ////
 
@@ -23,4 +23,4 @@ Meus sinceros agradecimentos:
 
 Créditos 
 - Desenvolvedor: [Sebastian Devus da Silva](https://github.com/SebastianDevus)
-- [Template](https://github.com/ermogenes/calculadora-2022-final) disponibilizado por [Ermogenes Palacio](https://github.com/ermogenes)
+- [Template do programa](https://github.com/ermogenes/calculadora-2022-final) disponibilizado por [Ermogenes Palacio](https://github.com/ermogenes)
