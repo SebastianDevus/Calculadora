@@ -2,7 +2,7 @@
 
 ---
 
-[Clique aqui para baixar o programa](https://github.com/SebastianDevus/Calculadora/blob/main/dist/Calculadora.zip)
+[Clique aqui para baixar o programa](https://github.com/SebastianDevus/Calculadora/raw/main/dist/Calculadora.zip)
 
 ---
 
