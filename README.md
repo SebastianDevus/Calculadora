@@ -30,6 +30,6 @@
 ---
 
 ### Planos futuros
-[] Adicionar cálculos relacionados a trigronometria
-[] Adicionar cálculo de raízes de uma equação de segundo grau (Bhaskara)
-[] Outras conversões de medida
+- [ ] Adicionar cálculos relacionados a trigronometria
+- [ ] Adicionar cálculo de raízes de uma equação de segundo grau (Bhaskara)
+- [ ] Outras conversões de medida
