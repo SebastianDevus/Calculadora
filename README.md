@@ -11,7 +11,8 @@
 
 ---
 
-- Calculadora com uso de Classlib e Testes - Realiza as quatro operações básicas, além de exponenciação e radiciação.
+### Calculadora com uso de Classlib e Testes 
+- Realiza as quatro operações básicas, além de exponenciação e radiciação.
 - Realiza conversões entre Milhas e Quilômetros, além das 3 medidas de temperaturas mais usadas atualmente (Celsius, Fahrenheit e Kelvin)
 
 ---
@@ -25,3 +26,10 @@
 ### Créditos 
 - Desenvolvedor: [Sebastian Devus da Silva](https://github.com/SebastianDevus)
 - [Template do programa](https://github.com/ermogenes/calculadora-2022-final) disponibilizado por [Ermogenes Palacio](https://github.com/ermogenes)
+
+---
+
+### Planos futuros
+[] Adicionar cálculos relacionados a trigronometria
+[] Adicionar cálculo de raízes de uma equação de segundo grau (Bhaskara)
+[] Outras conversões de medida
