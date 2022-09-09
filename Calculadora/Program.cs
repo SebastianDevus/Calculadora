@@ -8,14 +8,8 @@ do
     Console.Clear();
 
     Console.WriteLine("----- Calculadora -----\n");
-    Console.WriteLine("[1] Adição");
-    Console.WriteLine("[2] Subtração");
-    Console.WriteLine("[3] Multiplicação");
-    Console.WriteLine("[4] Divisão");
-    Console.WriteLine("[5] Exponenciação");
-    Console.WriteLine("[6] Radiciação");
-
-    Console.WriteLine("\n[C] Conversões");
+    Console.WriteLine("[A] Aritmética");
+    Console.WriteLine("[C] Conversões");
 
     Console.WriteLine("\n[S] Sobre");
     Console.WriteLine("[0] Sair");
@@ -29,42 +23,9 @@ do
     {
         switch (opcaoDesejada)
         {
-            case "1":
-                AritmeticaVisuais.AdicaoVisuais();
-
-                VisuaisMiscelanios.Pausa();
+            case "A" or "a":
+                AritmeticaVisuais.MenuAritmetica();
                 break;
-
-            case "2":
-                AritmeticaVisuais.SubtracaoVisuais();
-
-                VisuaisMiscelanios.Pausa();
-                break;
-
-            case "3":
-                AritmeticaVisuais.MultiplicacaoVisuais();
-
-                VisuaisMiscelanios.Pausa();
-                break;
-
-            case "4":
-                AritmeticaVisuais.DivisaoVisuais();
-
-                VisuaisMiscelanios.Pausa();
-                break;
-
-            case "5":
-                AritmeticaVisuais.ExponenciacaoVisuais();
-
-                VisuaisMiscelanios.Pausa();
-                break;
-
-            case "6":
-                AritmeticaVisuais.RadiciacaoVisuais();
-
-                VisuaisMiscelanios.Pausa();
-                break;
-
             case "C" or "c":
                 ConversoesVisuais.MenuConversoes();
                 break;
@@ -87,7 +48,7 @@ do
     catch (Exception e)
     {
         VisuaisMiscelanios.ExibeMensagemDeErro(e.Message);
-        
+
         VisuaisMiscelanios.Pausa();
     }
     finally

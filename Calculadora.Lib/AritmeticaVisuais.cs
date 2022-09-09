@@ -2,6 +2,83 @@ namespace Calculadora.Lib;
 
 public class AritmeticaVisuais
 {
+
+    public static void MenuAritmetica()
+    {
+        string opcaoDesejada;
+
+        do
+        {
+            Console.WriteLine("----- Aritmética -----\n");
+            Console.WriteLine("[1] Adição");
+            Console.WriteLine("[2] Subtração");
+            Console.WriteLine("[3] Multiplicação");
+            Console.WriteLine("[4] Divisão");
+            Console.WriteLine("[5] Exponenciação");
+            Console.WriteLine("[6] Radiciação");
+
+            Console.WriteLine("\n[0] Voltar");
+
+            Console.Write("\nEscolha uma opção: ");
+            opcaoDesejada = Console.ReadLine()!;
+            try
+            {
+                switch (opcaoDesejada)
+                {
+                    case "1":
+                        AritmeticaVisuais.AdicaoVisuais();
+
+                        VisuaisMiscelanios.Pausa();
+                        break;
+
+                    case "2":
+                        AritmeticaVisuais.SubtracaoVisuais();
+
+                        VisuaisMiscelanios.Pausa();
+                        break;
+
+                    case "3":
+                        AritmeticaVisuais.MultiplicacaoVisuais();
+
+                        VisuaisMiscelanios.Pausa();
+                        break;
+
+                    case "4":
+                        AritmeticaVisuais.DivisaoVisuais();
+
+                        VisuaisMiscelanios.Pausa();
+                        break;
+
+                    case "5":
+                        AritmeticaVisuais.ExponenciacaoVisuais();
+
+                        VisuaisMiscelanios.Pausa();
+                        break;
+
+                    case "6":
+                        AritmeticaVisuais.RadiciacaoVisuais();
+
+                        VisuaisMiscelanios.Pausa();
+                        break;
+
+                    case "0":
+                        return;
+
+                }
+            }
+            catch (Exception e)
+            {
+                VisuaisMiscelanios.ExibeMensagemDeErro(e.Message);
+
+                VisuaisMiscelanios.Pausa();
+            }
+            finally
+            {
+                Console.ResetColor();
+            }
+        } while (opcaoDesejada != "0");
+    }
+
     public static void AdicaoVisuais()
     {
         double a, b, resultado;
