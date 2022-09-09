@@ -31,9 +31,9 @@ do
                 break;
 
             case "S" or "s":
-                VisuaisMiscelanios.ExibeSobre();
+                VisuaisUniversais.ExibeSobre();
 
-                VisuaisMiscelanios.Pausa();
+                VisuaisUniversais.Pausa();
                 break;
 
             case "0":
@@ -47,9 +47,9 @@ do
     }
     catch (Exception e)
     {
-        VisuaisMiscelanios.ExibeMensagemDeErro(e.Message);
+        VisuaisUniversais.ExibeMensagemDeErro(e.Message);
 
-        VisuaisMiscelanios.Pausa();
+        VisuaisUniversais.Pausa();
     }
     finally
     {

@@ -1,7 +1,7 @@
 namespace Calculadora.Lib;
 
 // Esse arquivo existe para separar alguns visuais aleatórios
-public class VisuaisMiscelanios
+public class VisuaisUniversais
 {
     public static void ExibeMensagemDeErro(string mensagemDeErro)
     {

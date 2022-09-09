@@ -28,37 +28,37 @@ public class AritmeticaVisuais
                     case "1":
                         AritmeticaVisuais.AdicaoVisuais();
 
-                        VisuaisMiscelanios.Pausa();
+                        VisuaisUniversais.Pausa();
                         break;
 
                     case "2":
                         AritmeticaVisuais.SubtracaoVisuais();
 
-                        VisuaisMiscelanios.Pausa();
+                        VisuaisUniversais.Pausa();
                         break;
 
                     case "3":
                         AritmeticaVisuais.MultiplicacaoVisuais();
 
-                        VisuaisMiscelanios.Pausa();
+                        VisuaisUniversais.Pausa();
                         break;
 
                     case "4":
                         AritmeticaVisuais.DivisaoVisuais();
 
-                        VisuaisMiscelanios.Pausa();
+                        VisuaisUniversais.Pausa();
                         break;
 
                     case "5":
                         AritmeticaVisuais.ExponenciacaoVisuais();
 
-                        VisuaisMiscelanios.Pausa();
+                        VisuaisUniversais.Pausa();
                         break;
 
                     case "6":
                         AritmeticaVisuais.RadiciacaoVisuais();
 
-                        VisuaisMiscelanios.Pausa();
+                        VisuaisUniversais.Pausa();
                         break;
 
                     case "0":
@@ -68,9 +68,9 @@ public class AritmeticaVisuais
             }
             catch (Exception e)
             {
-                VisuaisMiscelanios.ExibeMensagemDeErro(e.Message);
+                VisuaisUniversais.ExibeMensagemDeErro(e.Message);
 
-                VisuaisMiscelanios.Pausa();
+                VisuaisUniversais.Pausa();
             }
             finally
             {

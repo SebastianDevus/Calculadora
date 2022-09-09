@@ -69,14 +69,14 @@ public class ConversoesVisuais
             }
             catch (Exception e)
             {
-                VisuaisMiscelanios.ExibeMensagemDeErro(e.Message);
+                VisuaisUniversais.ExibeMensagemDeErro(e.Message);
             }
             finally
             {
                 Console.ResetColor();
             }
 
-            VisuaisMiscelanios.Pausa();
+            VisuaisUniversais.Pausa();
         }
         while (conversaoDesejada != "0");
 
