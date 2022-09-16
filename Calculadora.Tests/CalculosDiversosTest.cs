@@ -16,5 +16,14 @@ public class CalculosDiversosTest
         Assert.Equal(resultadoEsperado, CalculosDiversos.BhaskaraCalculaDelta(a, b, c));
     }
 
-    
+    [Theory]
+    [InlineData()]
+    [InlineData()]
+    [InlineData()]
+    [InlineData()]
+    [InlineData()]
+    public void BhaskaraCalculaRaiz1Corretamente(double a, double b, double delta, double resultadoEsperado)
+    {
+        Assert.Equal(resultadoEsperado, CalculosDiversos.BhaskaraCalculaRaiz1(a, b, delta));
+    }
 }
